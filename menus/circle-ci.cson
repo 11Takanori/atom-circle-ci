@@ -3,9 +3,9 @@
   label: 'Packages'
   submenu: [
     label: 'Circle CI'
-    submenu: [{
-      label: 'Toggle',
-      command: 'circle-ci:toggle'
-    }]
+    submenu: [
+        { label: 'Toggle', command: 'circle-ci:toggle'}
+        { label: 'Open',   command: 'circle-ci:open'}
+    ]
   ]
 }]
