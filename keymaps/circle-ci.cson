@@ -9,3 +9,4 @@
 # https://atom.io/docs/latest/advanced/keymaps
 '.atom-workspace':
   'cmd-C': 'circle-ci:toggle'
+  'ctrl-c i': 'circle-ci:open'
