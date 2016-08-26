@@ -7,6 +7,6 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.atom-workspace':
+'.workspace':
   'cmd-C': 'circle-ci:toggle'
   'ctrl-c i': 'circle-ci:open'
