@@ -1,4 +1,5 @@
 {View, $$} = require 'atom-space-pen-views'
+{shell}    = require 'electron'
 
 CircleCiClient = require './circle-ci-client'
 
@@ -82,6 +83,7 @@ module.exports =
           build = buildArray[0]
           status = build.status?.replace('_', ' ').capitalize()
           build_time = build.build_time_millis / 1000
+          @url = build.build_url
 
           @showStatus build.status, "#{status} by #{build.committer_name} in #{build_time} seconds"
           @statusLabel.text build.build_num
@@ -127,3 +129,7 @@ module.exports =
 
     String::capitalize = ->
       @substr(0, 1).toUpperCase() + @substr(1)
+
+    openUrlInBrowser: ->
+      if @url
+        shell.openExternal @url

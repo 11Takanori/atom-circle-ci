@@ -11,6 +11,10 @@ module.exports =
       if statusBar?
         @view ?= new CircleCiStatusView
 
+    atom.commands.add 'atom-pane',
+      'circle-ci:open': =>
+        @view.openUrlInBrowser()
+
   deactivate: ->
     @view.destroy()
     @view = null
